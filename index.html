@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LOGIN</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+	
+	<div class="modal-container js_modal">
+		<div class="login-box">
+			<a href="javascript:;" class="fa fa-times js_closeBtn"></a>
+			<div class="hd">
+				<h1>用户登录</h1>
+			</div>
+			<div class="bd">
+				<div class="error-tip js_errorTip"></div>
+				<form action="http://localhost/api_for_study/User/login" method="post" id="js_loginForm">
+					<div class="input-box">
+						<label for="js_username" class="fa fa-user"></label>
+						<input type="text" id="js_username" class="text-input" placeholder="用户名" maxlength=20 />
+					</div>
+					<div class="input-box">
+						<label for="js_password" class="fa fa-lock"></label>
+						<input type="password" id="js_password" class="text-input" placeholder="密码" maxlength=20 />
+					</div>
+					<div class="input-box">
+						<input type="checkbox" id="js_persistedLogin" />
+						<label for="js_persistedLogin" class="checkbox-label">保持登录30天</label>
+					</div>
+					<div class="input-box">
+						<button type="submit" class="login-btn js-loginBtn">登录</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<header class="header">
+		<div class="user">
+			<div class="user-item js_loginStatus">
+				<a href="javascript:;" class="user-btn js_openBtn">登录</a>
+			</div>
+		</div>
+	</header>
+  
+  <script type="text/html" id="js_loginTpl">
+  	<a href="javascript:;" class="user-btn js_openBtn">登录</a>
+  </script>
+
+  <script type="text/html" id="js_userTpl">
+  	<span class="nickname">欢迎您，{{nickname}}</span>
+  	<a href="http://localhost/api_for_study/User/logout" class="user-btn js_logout">退出</a>
+  </script>
+  <script src="js/utils.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
